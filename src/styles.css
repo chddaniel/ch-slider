@@ -1,5 +1,5 @@
 /* Main Slider */
-/* .embla {
+.embla {
     overflow: hidden;
 }
 
@@ -10,12 +10,12 @@
 .embla__slide {
     flex: 0 0 100%;
     min-width: 0;
-} */
+}
 
 
 /* Thumbs */
 
-/* .embla-thumbs {
+.embla-thumbs {
     --thumbs-slide-spacing: 0.8rem;
     --thumbs-slide-height: 6rem;
     margin-top: var(--thumbs-slide-spacing);
@@ -37,6 +37,6 @@
     .embla-thumbs__slide {
       flex: 0 0 15%;
     }
-  } */
+  }
 
   

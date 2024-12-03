@@ -1,4 +1,4 @@
-import './styles.css';
+// import './styles.css';
 
 import EmblaCarousel from 'embla-carousel'
 import Autoplay from 'embla-carousel-autoplay'
@@ -20,7 +20,7 @@ import {
 
         const options = { loop: isLoop ? true : false }
         const plugins = []
-        
+
         if(isAutoPlay) plugins.push(Autoplay());
         const emblaApiMain = EmblaCarousel(viewportNode, options, plugins)
 

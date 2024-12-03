@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH Slider</title>
+    <style>
+        .container {
+            max-width: 1300px;
+            margin: 150px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="embla" data-autoplay="true" data-loop="true">
+            <!-- Main Carousel -->
+            <div class="embla__viewport">
+                <div class="embla__container">
+                    <div class="embla__slide">Slide 1</div>
+                    <div class="embla__slide">Slide 2</div>
+                    <div class="embla__slide">Slide 3</div>
+                </div>
+            </div>
+            <!-- Arrow buttons -->
+            <div class="embla__arrows">
+                <button class="embla__prev">Prev</button>
+                <button class="embla__next">Next</button>
+            </div>
+           <!-- Thumbnails -->
+            <div class="embla-thumbs">
+                <div class="embla-thumbs__viewport">
+                    <div class="embla-thumbs__container">
+                        <div class="embla-thumbs__slide embla-thumbs__slide--selected">
+                            <button type="button" class="embla-thumbs__slide__number">
+                                1
+                            </button>
+                        </div>
+                        <div class="embla-thumbs__slide">
+                            <button type="button" class="embla-thumbs__slide__number">
+                                2
+                            </button>
+                        </div>
+                        <div class="embla-thumbs__slide">
+                            <button type="button" class="embla-thumbs__slide__number">
+                                3
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

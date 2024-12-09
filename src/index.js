@@ -19,7 +19,10 @@ import {
         const isAutoPlay = rootNode.dataset.autoplay;
         const isContainScroll = rootNode.dataset.containScroll;
 
-        const options = { loop: isLoop ? true : false, containScroll: isContainScroll ? isContainScroll : false  }
+        const options = {
+            loop: !!isLoop, // Converts truthy/falsy to boolean
+            containScroll: isContainScroll === 'keepSnaps' ? 'keepSnaps' : !!isContainScroll
+        }
         const plugins = []
 
         if (isAutoPlay) plugins.push(Autoplay());

@@ -1,4 +1,4 @@
-// import './styles.css';
+import './styles.css';
 
 import EmblaCarousel from 'embla-carousel'
 import Autoplay from 'embla-carousel-autoplay'
@@ -17,8 +17,9 @@ import {
         const viewportNode = rootNode.querySelector('.embla__viewport')
         const isLoop = rootNode.dataset.loop;
         const isAutoPlay = rootNode.dataset.autoplay;
+        const isContainScroll = rootNode.dataset.containScroll;
 
-        const options = { loop: isLoop ? true : false, containscroll: false }
+        const options = { loop: isLoop ? true : false, containScroll: isContainScroll ? isContainScroll : false  }
         const plugins = []
 
         if (isAutoPlay) plugins.push(Autoplay());

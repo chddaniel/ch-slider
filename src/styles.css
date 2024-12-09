@@ -5,10 +5,11 @@
 
 .embla__container {
     display: flex;
+    border:1px solid red;
 }
 
 .embla__slide {
-    flex: 0 0 100%;
+    flex: 0 0 50%;
     min-width: 0;
 }
 

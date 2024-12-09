@@ -18,10 +18,10 @@ import {
         const isLoop = rootNode.dataset.loop;
         const isAutoPlay = rootNode.dataset.autoplay;
 
-        const options = { loop: isLoop ? true : false }
+        const options = { loop: isLoop ? true : false, containscroll: false }
         const plugins = []
 
-        if(isAutoPlay) plugins.push(Autoplay());
+        if (isAutoPlay) plugins.push(Autoplay());
         const emblaApiMain = EmblaCarousel(viewportNode, options, plugins)
 
         // Set up next & prev buttons

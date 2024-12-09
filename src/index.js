@@ -2,6 +2,8 @@
 
 import EmblaCarousel from 'embla-carousel'
 import Autoplay from 'embla-carousel-autoplay'
+import ClassNames from 'embla-carousel-class-names'
+
 
 import {
     addThumbBtnsClickHandlers,
@@ -18,6 +20,7 @@ import {
         const isLoop = rootNode.dataset.loop;
         const isAutoPlay = rootNode.dataset.autoplay;
         const isContainScroll = rootNode.dataset.containScroll;
+        const isClassNames = rootNode.dataset.classnames
 
         const options = {
             loop: !!isLoop, // Converts truthy/falsy to boolean
@@ -26,6 +29,7 @@ import {
         const plugins = []
 
         if (isAutoPlay) plugins.push(Autoplay());
+        if (isClassNames) plugins.push(ClassNames());
         const emblaApiMain = EmblaCarousel(viewportNode, options, plugins)
 
         // Set up next & prev buttons

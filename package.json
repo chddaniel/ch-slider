@@ -23,6 +23,7 @@
   "license": "ISC",
   "dependencies": {
     "embla-carousel": "^8.5.1",
-    "embla-carousel-autoplay": "^8.5.1"
+    "embla-carousel-autoplay": "^8.5.1",
+    "embla-carousel-class-names": "^8.5.1"
   }
 }

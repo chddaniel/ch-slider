@@ -20,17 +20,32 @@ import {
         const isLoop = rootNode.dataset.loop;
         const isAutoPlay = rootNode.dataset.autoplay;
         const isContainScroll = rootNode.dataset.containScroll;
-        const isClassNames = rootNode.dataset.classnames
+        const isClassNames = rootNode.dataset.classnames;
+        const isClickable = rootNode.dataset.clickable
 
         const options = {
             loop: !!isLoop, // Converts truthy/falsy to boolean
-            containScroll: isContainScroll === 'keepSnaps' ? 'keepSnaps' : !!isContainScroll
+            containScroll: isContainScroll === 'keepSnaps' ? 'keepSnaps' : !!isContainScroll,
+
         }
+
         const plugins = []
 
         if (isAutoPlay) plugins.push(Autoplay());
         if (isClassNames) plugins.push(ClassNames());
         const emblaApiMain = EmblaCarousel(viewportNode, options, plugins)
+
+        if (!!isClickable) {
+            const slides = emblaApiMain.slideNodes()
+
+            const scrollToIndex = slidesThumbs.map(
+                (_, index) => () => emblaApiMain.scrollTo(index)
+            )
+
+            slides.forEach((slideNode, index) => {
+                slideNode.addEventListener('click', scrollToIndex[index], false)
+            })
+        }
 
         // Set up next & prev buttons
         if (rootNode.querySelector('.embla__arrows')) {

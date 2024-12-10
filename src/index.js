@@ -38,7 +38,7 @@ import {
         if (!!isClickable) {
             const slides = emblaApiMain.slideNodes()
 
-            const scrollToIndex = slidesThumbs.map(
+            const scrollToIndex = slides.map(
                 (_, index) => () => emblaApiMain.scrollTo(index)
             )
 

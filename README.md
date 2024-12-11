@@ -1,7 +1,7 @@
 # ch-slider
 A slider plugin for smoother sliding.
 
-## For local testing & development
+### For local testing & development
 
 - Can run on NPM 10.2.4, Node v21.2.0
 - Clone the repo and run `npm install`
